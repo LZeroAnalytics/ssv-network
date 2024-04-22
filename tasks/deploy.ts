@@ -41,7 +41,7 @@ task('deploy:all', 'Deploy SSVNetwork, SSVNetworkViews and module contracts, and
   });
 
   // Fetch proxy bytecode
-  const proxyArtifact = await hre.artifacts.readArtifact('ERC1967Proxy');
+  const proxyArtifact = await hre.artifacts.readArtifact('SSVProxy');
   const proxyBytecode = proxyArtifact.bytecode;
 
   // Genesis-like JSON structure
