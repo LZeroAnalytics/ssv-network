@@ -37,7 +37,7 @@ task('deploy:all', 'Deploy SSVNetwork, SSVNetworkViews and module contracts, and
   });
 
   const ssvNetworkViews = await hre.run('deploy:ssv-network-views', {
-    ssvNetworkAddress: ssvNetwork.ssvNetworkProxyAddress,
+    ssvNetworkAddress: ssvNetwork.proxyAddress,
   });
 
   // Fetch proxy bytecode
