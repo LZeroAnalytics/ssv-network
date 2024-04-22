@@ -1,5 +1,6 @@
 import {subtask, task, types} from 'hardhat/config';
 import {SSVModules} from './config';
+import fs from 'fs';
 
 /**
  @title Hardhat task to deploy all required contracts for SSVNetwork.
@@ -70,7 +71,7 @@ task('deploy:all', 'Deploy SSVNetwork, SSVNetworkViews and module contracts, and
     }
   };
 
-  console.log(JSON.stringify(genesisData, null, 2));
+  fs.writeFileSync('/tmp/genesis-data.json', JSON.stringify(genesisData, null, 2));
 });
 
 /**
